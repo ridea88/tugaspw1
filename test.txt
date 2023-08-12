@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doctor Registration</title>
+    @include('admin.ccs')
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <div class="container-scroller">
+        @include('admin.sidebar')
+        <div class="container-fluid page-body-wrapper">
+            @include('admin.navbar')
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="container" style="padding-top: 100px;">
+                        <div class="form-container">
+                            <h2>Doctor Registration</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Doctor Name</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter the name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number">Phone</label>
+                                    <input type="number" class="form-control" name="number" placeholder="Enter the number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="speciality">Speciality</label>
+                                    <select class="form-control" name="speciality">
+                                        <option value="" disabled selected>--Select--</option>
+                                        <option value="skin">Skin</option>
+                                        <option value="heart">Heart</option>
+                                        <option value="eye">Eye</option>
+                                        <option value="nose">Nose</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="room">Room</label>
+                                    <input type="text" class="form-control" name="room" placeholder="Enter the room number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="file">Doctor Image</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="fileInput" name="file">
+                                        <label class="custom-file-label" for="fileInput">Choose file</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-submit">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                @include('admin.footer')
+            </div>
+        </div>
+    </div>
+    @include('admin.script')
+    <script>
+        // Add your custom scripts here
+    </script>
+</body>
+</html>
